@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-class Category {
+class Food {
   //this is called "model"
   final int id;
   final String content;
-  final Color color;
   final String pathImage;
-  const Category({
+  final double price;
+  final int categoryId;
+  const Food({
     required this.id,
     required this.content,
-    required this.color,
+    required this.price,
+    required this.categoryId,
     required this.pathImage
   });
   @override
   String toString() {
     // TODO: implement toString
-    return "$id:$content:$color:$pathImage";
+    return "$id:$content:$price:$categoryId:$pathImage";
   }
 }

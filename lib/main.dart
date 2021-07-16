@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/Model/Category_item.dart';
 import 'package:food_app/page/Categories_page.dart';
+import 'package:food_app/page/FoodPage.dart';
 import './Data/CatagoriesData.dart';
 
 void main() {
@@ -13,6 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: '/',
+      routes: {
+        FoodPage.RoutePage: (context)=>FoodPage(),
+        Categories_page.RoutePage:(context)=>Categories_page()
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

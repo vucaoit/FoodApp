@@ -4,6 +4,7 @@ import '../Data/CatagoriesData.dart';
 import '../Model/Category_item.dart';
 
 class Categories_page extends StatelessWidget{
+  static const String RoutePage='/CategoriesPage';
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
