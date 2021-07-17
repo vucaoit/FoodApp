@@ -6,9 +6,11 @@ import 'Food_item.dart';
 class FoodListView extends StatelessWidget{
   static const Data=FAKE_SNACKS;
   final Category category;
-  FoodListView({required this.category});
+  String findName='';
+  FoodListView({required this.category, required this.findName});
   ListView _buildFoodListView(){
-    List<Food> listSnack= Data.where((element) => element.categoryId==this.category.id).toList();
+    List<Food> listSnack= Data.where((element) =>
+    element.categoryId==this.category.id && element.content.toLowerCase().indexOf(findName.toLowerCase())!=-1).toList();
     return ListView.builder(
     itemCount: listSnack.length,
     itemBuilder:(context,index){

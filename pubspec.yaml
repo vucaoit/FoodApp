@@ -35,6 +35,13 @@ flutter:
     - assets/images/Foods/Snacks/
     - assets/images/Foods/FastFood/
     - assets/images/Foods/Noodlies/
+    - assets/images/Foods/Vegetarian/
+    - assets/images/Foods/Burger/
+    - assets/images/Foods/Icecream/
+    - assets/images/Foods/Bread/
+    - assets/images/Foods/Coffe/
+    - assets/images/Foods/Cake/
+    - assets/images/Foods/Sandwitch/
   fonts:
     - family: chewy
       fonts:

@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catagories",
+        title: Text("Home Page",
           style: TextStyle(
               fontSize: 20,
               fontStyle: FontStyle.italic,
@@ -50,7 +50,40 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
-          child: Categories_page(),
+          child: Column(
+            children: [
+              Stack(
+                children: <Widget>[
+                  // Stroked text as border.
+                  Text(
+                    'CATEGORIES',
+                    style: TextStyle(
+                      fontSize: 40,
+                      letterSpacing: 3,
+                      foreground: Paint()
+                        ..style = PaintingStyle.stroke
+                        ..strokeWidth = 6
+                        ..color = Colors.blue,
+                    ),
+                  ),
+                  // Solid text as fill.
+                  Text(
+                    'CATEGORIES',
+                    style: TextStyle(
+                      fontSize: 40,
+                      letterSpacing: 3,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(top: 10),
+                    child: Categories_page(),
+                  ))
+            ],
+          )
         ),
       ),
     );
