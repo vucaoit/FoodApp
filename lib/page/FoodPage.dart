@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/Model/Category.dart';
 import 'package:food_app/Model/FoodListView.dart';
+import 'package:food_app/Model/MyCart.dart';
+import '../Data/FoodsData.dart';
 
 class FoodPage extends StatefulWidget{
   static const String RoutePage='/FoodsPage';
@@ -12,7 +14,6 @@ class FoodPage extends StatefulWidget{
   
 }
 class _FoodPage extends State<FoodPage>{
-
   late final Category category;
   String findInp='';
   final findEditingController = TextEditingController();
@@ -49,11 +50,11 @@ class _FoodPage extends State<FoodPage>{
                         ),
                     ),
                   ),
-                  Expanded(child: FoodListView(category: arguments,findName: this.findInp))
+                  Expanded(child: FoodListView(category: arguments,findName: this.findInp,))
                 ],
               )
           ),
-        )
+        ),
     );
   }
 }

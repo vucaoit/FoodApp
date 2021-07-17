@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-
+import 'package:food_app/Model/MyCart.dart' as mycart;
 import 'Foods.dart';
 
 class Food_item extends StatelessWidget{
@@ -10,6 +10,7 @@ class Food_item extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
     Food food=snack;
     return Container(
       child: Row(
@@ -109,7 +110,12 @@ class Food_item extends StatelessWidget{
             tooltip: 'Increase volume by 10',
             iconSize: 40,
             onPressed: () {
-              print("Oke");
+              mycart.addToCart(this.snack);
+              Scaffold.of(context).showSnackBar(
+                SnackBar(content: Text("Added to your Cart",style: TextStyle(fontSize: 20),),
+                duration: Duration(seconds: 1),
+                )
+              );
             },
           ),
           ),
