@@ -30,6 +30,11 @@ dev_dependencies:
     sdk: flutter
   intl: ">=0.14.0"
   flutter_sms: ^2.3.1
+  firebase_core: ^1.4.0
+  firebase_storage: ^8.0.0
+  firebase_auth: ^3.0.1
+  cloud_firestore: ^2.4.0
+  firebase_analytics: ^8.0.2
 flutter:
   uses-material-design: true
   assets:
@@ -44,6 +49,7 @@ flutter:
     - assets/images/Foods/Coffe/
     - assets/images/Foods/Cake/
     - assets/images/Foods/Sandwitch/
+    - assets/images/menu/
   fonts:
     - family: chewy
       fonts:
