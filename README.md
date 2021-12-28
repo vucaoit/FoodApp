@@ -1,6 +1,7 @@
 # food_app
 
 flutter project name is foodapp
+<img src="/img/1.jpg>
 
 ## Getting Started
 
